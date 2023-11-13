@@ -13,6 +13,11 @@ body,
   padding: 0;
   box-sizing: border-box;
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -87,19 +92,20 @@ nav {
   margin-bottom: 100px;
 }
 
-.main-box {
+.main {
   padding: 70px 0px;
   padding-right: 50px;
   width: 50%;
 }
-.main-box h1 {
+.main h1 {
   margin-bottom: 35px;
 }
-.mass-box {
+.form {
   position: absolute;
   top: 0;
   right: 0;
   display: flex;
+  margin-top: -100px;
   max-width: 564px;
   height: auto;
   padding: 32px;
@@ -128,10 +134,13 @@ nav {
   line-height: 150%;
 }
 input[type="radio"] {
-  border: 0px;
+  cursor: pointer;
+  border: 0;
   height: 31px;
   width: 31px;
+  outline: 0;
 }
+
 .metric-inputs {
   width: 100%;
   display: flex;
@@ -161,6 +170,7 @@ label span {
   letter-spacing: -1.2px;
 }
 input[type="text"] {
+  cursor: pointer;
   width: 90%;
   display: flex;
   padding: 20px 24px;
@@ -176,6 +186,28 @@ input[type="text"] {
   font-weight: 600;
   line-height: normal;
   letter-spacing: -1.2px;
+}
+input[type="text"]:active,
+input[type="text"]:focus {
+  outline: 2px solid var(--Blue);
+}
+.btn {
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--Blue);
+  color: var(--Pure-White);
+  border: none;
+  padding: 10px 20px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:active {
+  transform: scale(0.98);
 }
 
 .result {

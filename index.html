@@ -26,7 +26,7 @@
         <img src="assets/images/logo.svg" />
       </nav>
       <main id="hero">
-        <div class="main-box">
+        <div class="main">
           <h1>Body Mass Index Calculator</h1>
           <p>
             Better understand your weight in relation to your height using our
@@ -35,7 +35,7 @@
             to evaluate your overall health and well-being.
           </p>
         </div>
-        <div class="mass-box" id="mass-box">
+        <form class="form" id="form">
           <h3>Enter your details below</h3>
           <div class="radio-box">
             <label for="metric">
@@ -62,29 +62,31 @@
           <div class="metric-inputs">
             <label for="height-metric"
               >Height
-              <input type="text" id="height-metric" name="height-metric" /><span
-                >cm</span
-              ></label
+              <input
+                type="text"
+                id="height-metric"
+                name="height-metric"
+                required
+                maxlength="3"
+              /><span>cm</span></label
             >
             <label for="weight-metric"
               >Weight
-              <input type="text" id="weight-metric" name="weight-metric" /><span
-                >kg</span
-              ></label
+              <input
+                type="text"
+                id="weight-metric"
+                name="weight-metric"
+                required
+                maxlength="3"
+              /><span>kg</span></label
             >
           </div>
-          <section class="result">
-            <article>
-              <p>Your BMI is...</p>
-              <h1 class="score">00.00</h1>
-            </article>
-            <p>
-              Your BMI suggests you're<span class="classification"> 00</span>.
-              Your ideal weight is between
-              <span class="range">00kgs - 00kgs</span>.
-            </p>
+          <button id="btn" class="btn">Check BMI</button>
+          <section class="result" id="result">
+            <h3>Welcome!</h3>
+            <p>Enter your height and weight and you will see your bmi here.</p>
           </section>
-        </div>
+        </form>
       </main>
       <section id="ideal">
         <img
