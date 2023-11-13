@@ -3,6 +3,7 @@
   --Gunmetal: #253347;
   --Dark-Electric-Blue: #5e6e85;
   --Pure-White: #fff;
+  --Blue: #345ff6;
 }
 
 html,
@@ -109,6 +110,74 @@ nav {
   background: var(--Pure-White);
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
 }
+.radio-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.radio-box label {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--Gunmetal);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+input[type="radio"] {
+  border: 0px;
+  height: 31px;
+  width: 31px;
+}
+.metric-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.metric-inputs label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--Dark-Electric-Blue);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+label span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 42px;
+  margin-right: 44px;
+  color: var(--Blue);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+input[type="text"] {
+  width: 90%;
+  display: flex;
+  padding: 20px 24px;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #d8e2e7;
+  background: var(--Pure-White);
+  color: var(--Gunmetal);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.2px;
+}
+
 .result {
   display: flex;
   padding: 32px;
@@ -117,7 +186,7 @@ nav {
   gap: 24px;
   align-self: stretch;
   border-radius: 16px 999px 999px 16px;
-  background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+  background: linear-gradient(90deg, var(--Blue) 0%, #587dff 100%);
 }
 .result * {
   color: var(--Pure-White);
@@ -153,7 +222,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-  margin: 50px 0 100px;
+  padding: 50px 0;
+  margin: 50px 0;
+  border-radius: 35px;
+  background: linear-gradient(
+    290deg,
+    rgba(215, 231, 254, 0.25) 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
 }
 #improvements .steps {
   display: flex;
@@ -166,4 +242,54 @@ nav {
   height: 72px;
   margin-bottom: 20px;
 }
-#
+#limitations {
+  position: relative;
+  height: 824px;
+  width: 100%;
+}
+#limitations .limits {
+  width: 50%;
+}
+.limits h2 {
+  margin-bottom: 35px;
+}
+#limitations .limit {
+  display: flex;
+  width: 365px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 16px;
+  background: var(--Pure-White);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+}
+.limit-logo {
+  display: flex;
+  gap: 16px;
+}
+.limit-gender {
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+.limit-age {
+  position: absolute;
+  top: 274px;
+  left: 398px;
+}
+.limit-muscle {
+  position: absolute;
+  top: 274px;
+  right: 0;
+}
+.limit-race {
+  position: absolute;
+  top: 496px;
+  right: 200px;
+}
+.limit-pregnancy {
+  position: absolute;
+  top: 496px;
+  left: 200px;
+}

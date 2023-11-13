@@ -36,8 +36,43 @@
           </p>
         </div>
         <div class="mass-box" id="mass-box">
-          <h4>Enter your details below</h4>
-          Metric Imperial Height Weight
+          <h3>Enter your details below</h3>
+          <div class="radio-box">
+            <label for="metric">
+              <input
+                type="radio"
+                id="metric"
+                name="fav_language"
+                value="metric"
+                checked
+              />
+              Metric</label
+            >
+            <label for="imperial">
+              <input
+                type="radio"
+                id="imperial"
+                name="fav_language"
+                value="imperial"
+              />
+              Imperial</label
+            >
+            <!-- Height Weight -->
+          </div>
+          <div class="metric-inputs">
+            <label for="height-metric"
+              >Height
+              <input type="text" id="height-metric" name="height-metric" /><span
+                >cm</span
+              ></label
+            >
+            <label for="weight-metric"
+              >Weight
+              <input type="text" id="weight-metric" name="weight-metric" /><span
+                >kg</span
+              ></label
+            >
+          </div>
           <section class="result">
             <article>
               <p>Your BMI is...</p>
@@ -96,45 +131,63 @@
         </article>
       </section>
       <section id="limitations">
-        <h2>Limitations of BMI</h2>
-        <p>
-          Although BMI is often a practical indicator of healthy weight, it is
-          not suited for every person. Specific groups should carefully consider
-          their BMI outcomes, and in certain cases, the measurement may not be
-          beneficial to use.
-        </p>
-        <article class="'limit limit-gender">
-          <h4>Gender</h4>
+        <article class="limits">
+          <h2>Limitations of BMI</h2>
+          <p>
+            Although BMI is often a practical indicator of healthy weight, it is
+            not suited for every person. Specific groups should carefully
+            consider their BMI outcomes, and in certain cases, the measurement
+            may not be beneficial to use.
+          </p>
+        </article>
+        <article class="limit limit-gender">
+          <div class="limit-logo">
+            <img src="assets/images/icon-gender.svg" />
+            <h4>Gender</h4>
+          </div>
           <p>
             The development and body fat composition of girls and boys vary with
             age. Consequently, a child's age and gender are considered when
             evaluating their BMI.
           </p>
         </article>
-        <article class="'limit limit-age">
-          <h4>Age</h4>
+        <article class="limit limit-age">
+          <div class="limit-logo">
+            <img src="assets/images/icon-age.svg" />
+            <h4>Age</h4>
+          </div>
           <p>
             In aging individuals, increased body fat and muscle loss may cause
             BMI to underestimate body fat content.
           </p>
         </article>
-        <article class="'limit limit-muscle">
-          <h4>Muscle</h4>
+        <article class="limit limit-muscle">
+          <div class="limit-logo">
+            <img src="assets/images/icon-muscle.svg" />
+            <h4>Muscle</h4>
+          </div>
           <p>
             BMI may misclassify muscular individuals as overweight or obese, as
             it doesn't differentiate muscle from fat.
           </p>
         </article>
-        <article class="'limit limit-pregnancy">
-          <h4>Pregnancy</h4>
+        <article class="limit limit-pregnancy">
+          <div class="limit-logo">
+            <img src="assets/images/icon-pregnancy.svg" />
+            <h4>Pregnancy</h4>
+          </div>
           <p>
             Expectant mothers experience weight gain due to their growing baby.
             Maintaining a healthy pre-pregnancy BMI is advisable to minimise
             health risks for both mother and child.
           </p>
         </article>
-        <article class="'limit limit-race">
-          <h4>Race</h4>
+        <article class="limit limit-race">
+          <div class="limit-logo">
+            <img src="assets/images/icon-race.svg" />
+            <h4>Race</h4>
+          </div>
+
           <p>
             Certain health concerns may affect individuals of some Black and
             Asian origins at lower BMIs than others. To learn more, it is
