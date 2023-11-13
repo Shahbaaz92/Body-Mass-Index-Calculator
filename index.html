@@ -10,63 +10,84 @@
       sizes="32x32"
       href="./assets/images/logo.svg"
     />
-
     <title>Body Mass Index Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="background"></div>
     <div class="container">
       <nav>
         <img src="assets/images/logo.svg" />
       </nav>
-      <main class="hero">
-        <h1>Body Mass Index Calculator</h1>
-        <p>
-          Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
-        </p>
+      <main id="hero">
+        <div class="main-box">
+          <h1>Body Mass Index Calculator</h1>
+          <p>
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </div>
         <div class="mass-box" id="mass-box">
           <h4>Enter your details below</h4>
           Metric Imperial Height Weight
-          <section>
-            <p>Your BMI is...</p>
-            <h1 class="score">00.00</h1>
+          <section class="result">
+            <article>
+              <p>Your BMI is...</p>
+              <h1 class="score">00.00</h1>
+            </article>
             <p>
-              Your BMI suggests you're<span class="classification">00</span>.
+              Your BMI suggests you're<span class="classification"> 00</span>.
               Your ideal weight is between
               <span class="range">00kgs - 00kgs</span>.
             </p>
           </section>
         </div>
       </main>
-      <section>
-        <h2>What your BMI result means</h2>
-        <p>
-          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
-          Maintaining a healthy weight may lower your chances of experiencing
-          health issues later on, such as obesity and type 2 diabetes. Aim for a
-          nutritious diet with reduced fat and sugar content, incorporating
-          ample fruits and vegetables. Additionally, strive for regular physical
-          activity, ideally about 30 minutes daily for five days a week.
-        </p>
+      <section id="ideal">
+        <img
+          src="assets/images/image-man-eating.webp"
+          alt="man eating healthy food"
+        />
+        <article class="weight">
+          <h2>What your BMI result means</h2>
+          <p>
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+            Maintaining a healthy weight may lower your chances of experiencing
+            health issues later on, such as obesity and type 2 diabetes. Aim for
+            a nutritious diet with reduced fat and sugar content, incorporating
+            ample fruits and vegetables. Additionally, strive for regular
+            physical activity, ideally about 30 minutes daily for five days a
+            week.
+          </p>
+        </article>
       </section>
-      <section>
-        <article>
+      <section id="improvements">
+        <article class="steps">
+          <img src="assets/images/icon-eating.svg" class="icons" />
           <h3>Healthy eating</h3>
           <p>
             Healthy eating promotes weight control, disease prevention, better
             digestion, immunity, mental clarity, and mood.
           </p>
         </article>
-        <article>
+        <article class="steps">
+          <img src="assets/images/icon-exercise.svg" class="icons" />
           <h3>Regular exercise</h3>
           <p>
             Exercise improves fitness, aids weight control, elevates mood, and
             reduces disease risk, fostering wellness and longevity.
           </p>
         </article>
-        <article>
+        <article class="steps">
+          <img src="assets/images/icon-sleep.svg" class="icons" />
           <h3>Adequate sleep</h3>
           <p>
             Sleep enhances mental clarity, emotional stability, and physical
@@ -74,7 +95,7 @@
           </p>
         </article>
       </section>
-      <section>
+      <section id="limitations">
         <h2>Limitations of BMI</h2>
         <p>
           Although BMI is often a practical indicator of healthy weight, it is
@@ -82,7 +103,7 @@
           their BMI outcomes, and in certain cases, the measurement may not be
           beneficial to use.
         </p>
-        <article>
+        <article class="'limit limit-gender">
           <h4>Gender</h4>
           <p>
             The development and body fat composition of girls and boys vary with
@@ -90,21 +111,21 @@
             evaluating their BMI.
           </p>
         </article>
-        <article>
+        <article class="'limit limit-age">
           <h4>Age</h4>
           <p>
             In aging individuals, increased body fat and muscle loss may cause
             BMI to underestimate body fat content.
           </p>
         </article>
-        <article>
+        <article class="'limit limit-muscle">
           <h4>Muscle</h4>
           <p>
             BMI may misclassify muscular individuals as overweight or obese, as
             it doesn't differentiate muscle from fat.
           </p>
         </article>
-        <article>
+        <article class="'limit limit-pregnancy">
           <h4>Pregnancy</h4>
           <p>
             Expectant mothers experience weight gain due to their growing baby.
@@ -112,7 +133,7 @@
             health risks for both mother and child.
           </p>
         </article>
-        <article>
+        <article class="'limit limit-race">
           <h4>Race</h4>
           <p>
             Certain health concerns may affect individuals of some Black and
