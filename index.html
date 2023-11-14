@@ -59,7 +59,7 @@
             >
             <!-- Height Weight -->
           </div>
-          <div class="metric-inputs">
+          <div class="metric-inputs" id="metric-inputs">
             <label for="height-metric"
               >Height
               <input
@@ -81,6 +81,51 @@
               /><span>kg</span></label
             >
           </div>
+          <div class="imperial-inputs hidden" id="imperial-inputs">
+            <div class="imperial-height">
+              <label for="height-imperial"
+                >Height
+                <input
+                  type="text"
+                  id="height-imperial"
+                  name="height-imperial"
+                  required
+                  maxlength="1"
+                /><span>ft</span></label
+              >
+              <label for="height-imperial2" class="height-imperial2">
+                <input
+                  type="text"
+                  id="height-imperial2"
+                  name="height-imperial2"
+                  required
+                  maxlength="2"
+                /><span>in</span></label
+              >
+            </div>
+            <div class="imperial-weight">
+              <label for="weight-imperial"
+                >Weight
+                <input
+                  type="text"
+                  id="weight-imperial"
+                  name="weight-imperial"
+                  required
+                  maxlength="2"
+                /><span>st</span></label
+              >
+              <label for="weight-imperial2" class="weight-imperial2">
+                <input
+                  type="text"
+                  id="weight-imperial2"
+                  name="weight-imperial2"
+                  required
+                  maxlength="3"
+                /><span>lbs</span></label
+              >
+            </div>
+          </div>
+
           <button id="btn" class="btn">Check BMI</button>
           <section class="result" id="result">
             <h3>Welcome!</h3>

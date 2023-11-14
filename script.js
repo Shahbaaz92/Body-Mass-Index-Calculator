@@ -1,13 +1,22 @@
 const form = document.getElementById('form');
 const metric = document.getElementById('metric');
 const imperial = document.getElementById('imperial');
+const metricInputs = document.getElementById('metric-inputs')
+const imperialInputs = document.getElementById('imperial-inputs')
 let height = document.getElementById('height-metric');
 let weight = document.getElementById('weight-metric');
 const score = document.getElementById('score');
 const result = document.getElementById('result')
 const btn = document.getElementById('btn')
 
-
+metric.addEventListener('click',()=>{
+    imperialInputs.classList.add('hidden')
+    metricInputs.classList.remove('hidden')
+})
+imperial.addEventListener('click',()=>{
+    metricInputs.classList.add('hidden')
+    imperialInputs.classList.remove('hidden')
+})
 
 // Function to calculate BMI
 const calculateBMI = (weight, height) => weight / (height ** 2);
@@ -48,6 +57,10 @@ const categorizeBMI = (weight, height) => {
 
 btn.addEventListener("click", (e)=>{
   e.preventDefault()
+
+  let numbers = /^[0-9]+$/;
+      if(weight.value.match(numbers) && height.value.match(numbers))
+  {
   let bmiClass = categorizeBMI(weight.value, height.value)
   result.innerHTML =`<article>
   <p>Your BMI is...</p>
@@ -58,6 +71,12 @@ btn.addEventListener("click", (e)=>{
   Your ideal weight is between
   <span class="range">${bmiClass.idealWeightRange}</span>.
 </p>`
+}
+else{
+    weight.value=''
+    height.value =''
+    result.innerHTML =`<h3>Please enter a proper number.</h3>`
+}
 }
 )
 

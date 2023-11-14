@@ -100,6 +100,7 @@ nav {
 .main h1 {
   margin-bottom: 35px;
 }
+/*Hero-section:Form*/
 .form {
   position: absolute;
   top: 0;
@@ -147,7 +148,22 @@ input[type="radio"] {
   display: flex;
   justify-content: space-evenly;
 }
-.metric-inputs label {
+.imperial-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.imperial-height {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.imperial-weight {
+  display: flex;
+  align-items: center;
+}
+.metric-inputs label,
+.imperial-inputs label {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -170,6 +186,15 @@ label span {
   line-height: normal;
   letter-spacing: -1.2px;
 }
+.height-imperial2,
+.weight-imperial2 {
+  margin-top: 20px;
+}
+.height-imperial2 span,
+.weight-imperial2 span {
+  margin-top: 20px;
+}
+
 input[type="text"] {
   cursor: pointer;
   width: 90%;
@@ -325,4 +350,7 @@ input[type="text"]:focus {
   position: absolute;
   top: 496px;
   left: 200px;
+}
+.hidden {
+  display: none;
 }
