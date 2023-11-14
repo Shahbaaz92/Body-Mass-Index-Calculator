@@ -8,14 +8,20 @@ let weight = document.getElementById('weight-metric');
 const score = document.getElementById('score');
 const result = document.getElementById('result')
 const btn = document.getElementById('btn')
+let isMeteric = true;
+let isImperial = false;
 
 metric.addEventListener('click',()=>{
     imperialInputs.classList.add('hidden')
     metricInputs.classList.remove('hidden')
+    isMeteric = true
+    isImperial = false
 })
 imperial.addEventListener('click',()=>{
     metricInputs.classList.add('hidden')
     imperialInputs.classList.remove('hidden')
+    isMeteric=false
+    isImperial = true
 })
 
 // Function to calculate BMI
