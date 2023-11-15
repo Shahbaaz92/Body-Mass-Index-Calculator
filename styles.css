@@ -87,7 +87,7 @@ nav img {
   height: 64px;
 }
 
-/*Hero-Section*/
+/*Hero*/
 #hero {
   position: relative;
   margin-bottom: 260px;
@@ -100,7 +100,7 @@ nav img {
 .main h1 {
   margin-bottom: 14px;
 }
-/*Hero-section:Form*/
+/*Hero:Form*/
 .form {
   position: absolute;
   top: 0;
@@ -263,7 +263,7 @@ input[type="text"]:focus {
   flex: 1 0 0;
 }
 
-/*Ideal-section*/
+/*Ideal*/
 #ideal {
   width: 100%;
   display: flex;
@@ -286,7 +286,7 @@ input[type="text"]:focus {
   align-items: center;
 }
 
-/*Improvements-section*/
+/*Improvements*/
 #improvements {
   display: flex;
   justify-content: space-between;
