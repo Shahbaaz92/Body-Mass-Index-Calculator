@@ -117,6 +117,7 @@ nav img {
   background: var(--Pure-White);
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
 }
+
 .radio-box {
   width: 100%;
   display: flex;
