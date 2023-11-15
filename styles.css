@@ -73,7 +73,7 @@ p {
 
 .container {
   height: auto;
-  margin: 50px 140px;
+  padding: 75px 50px;
   gap: 65px;
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ nav img {
 /*Hero-Section*/
 #hero {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 260px;
 }
 
 .main {
@@ -238,12 +238,18 @@ input[type="text"]:focus {
 .result {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  gap: 20px;
   padding: 32px;
   justify-content: center;
   align-items: center;
   border-radius: 16px 999px 999px 16px;
   background: linear-gradient(90deg, var(--Blue) 0%, #587dff 100%);
+}
+.welcome {
+  flex-direction: column;
+}
+.final {
+  flex-direction: row;
 }
 .result * {
   color: var(--Pure-White);
@@ -263,17 +269,17 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 60px;
-  margin-bottom: 30px;
+  column-gap: 30px;
+  margin-bottom: 100px;
 }
 #ideal img {
   width: 50%;
+  /* min-width: 350px; */
 }
-#ideal .weight {
+.weight {
   width: 50%;
-  margin: 150px 0 0;
-  padding: 20px;
-  gap: 30px;
+  padding: 100px 20px 0;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -294,8 +300,9 @@ input[type="text"]:focus {
     rgba(215, 231, 254, 0.25) 0%,
     rgba(214, 252, 254, 0) 100%
   );
+  margin-bottom: 160px;
 }
-#improvements .steps {
+.steps {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -313,10 +320,11 @@ input[type="text"]:focus {
 }
 #limitations {
   position: relative;
-  height: 850px;
+  height: 750px;
   width: 100%;
+  margin-bottom: 100px;
 }
-#limitations .limits {
+.limits {
   width: 50%;
   padding-right: 20px;
 }
@@ -324,6 +332,7 @@ input[type="text"]:focus {
   margin-bottom: 15px;
 }
 .limit {
+  position: absolute;
   display: flex;
   width: 365px;
   padding: 32px;
@@ -339,27 +348,22 @@ input[type="text"]:focus {
   gap: 16px;
 }
 .limit-gender {
-  position: absolute;
   top: 0;
   right: 100px;
 }
 .limit-age {
-  position: absolute;
-  top: 295px;
+  top: 275px;
   right: 398px;
 }
 .limit-muscle {
-  position: absolute;
-  top: 295px;
+  top: 275px;
   right: 0;
 }
 .limit-race {
-  position: absolute;
   bottom: 0;
   right: 200px;
 }
 .limit-pregnancy {
-  position: absolute;
   bottom: 0;
   right: 600px;
 }
@@ -368,11 +372,6 @@ input[type="text"]:focus {
 }
 
 @media (max-width: 1280px) {
-  .container {
-    margin: 0;
-    padding: 30px 20px;
-    background-color: yellowgreen;
-  }
   h1 {
     font-size: 3.5rem;
   }
@@ -404,20 +403,14 @@ input[type="text"]:focus {
     margin-bottom: 5px;
   }
   #limitations {
-    height: 750px;
-    margin-bottom: 100px;
+    height: 700px;
   }
-  .limit-age {
-    top: 270px;
+  .limits {
+    padding-left: 30px;
   }
+  .limit-age,
   .limit-muscle {
-    top: 270px;
-  }
-  .limit-race {
-    right: 130px;
-  }
-  .limit-pregnancy {
-    right: 530px;
+    top: 245px;
   }
 }
 @media (max-width: 1000px) {
@@ -465,7 +458,6 @@ input[type="text"]:focus {
   }
   #hero {
     margin-bottom: 30px;
-    background-color: antiquewhite;
   }
   .form {
     position: relative;
@@ -480,28 +472,100 @@ input[type="text"]:focus {
   }
   .classification {
     text-align: left;
-    width: 50%;
+    width: 60%;
   }
-  .score {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-  }
-  #ideal {
-    /* margin-top: 200px; */
-  }
+
   #improvements {
     width: 100%;
     flex-direction: column;
     align-items: start;
     gap: 40px;
   }
-  #improvements .steps {
+  .steps {
     flex-direction: row;
   }
   .steps .icons {
     width: 64px;
     height: 64px;
     margin-bottom: 0;
+  }
+  #limitations {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+  }
+  .limit {
+    position: initial;
+    width: 100%;
+    gap: 20px;
+  }
+  .limit-race {
+    grid-column: span 2;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+  .limits {
+    width: 100%;
+    grid-column: 1/3;
+    text-align: center;
+    padding: 50px;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    padding: 30px 10px;
+  }
+  .background {
+    height: 900px;
+  }
+
+  #ideal {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #ideal img {
+    width: 100%;
+    /* min-width: 350px; */
+    margin-bottom: 30px;
+  }
+  .weight {
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+  }
+  #improvements {
+    gap: 50px;
+  }
+  .steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #limitations {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .limits {
+    padding: 20px;
+  }
+  .limit-race {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .result {
+    border-radius: 16px 16px 16px 16px;
+    flex-direction: column;
+  }
+  .classification {
+    text-align: left;
+    width: 100%;
+  }
+  .metric-inputs {
+    flex-direction: column;
   }
 }

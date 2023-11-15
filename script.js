@@ -164,20 +164,18 @@ result.innerHTML =`<article class="score">
 else if(isMeteric){
     kilogram.value=''
     meter.value =''
-    result.innerHTML =`<h4>Please enter a proper number. Height in Centimeters, and weight in Kilograms</h4>`
+    result.innerHTML =`<h4>Please enter a proper number.</br> Height in Centimeters, and weight in Kilograms</h4>`
 }else{
     stone.value=''
     lb.value=''
     feet.value=''
     inch.value=''
-    result.innerHTML =`<h4>Please enter a proper number. Height in Feet and Inches, and weight in Stones and Lbs/Pounds</h4>`
+    result.innerHTML =`<h4>Please enter a proper number.</br> Height in Feet and Inches, and weight in Stones and Lbs/Pounds</h4>`
     
 
 }
-    result.style.flexDirection='row'
-    result.style.justifyContent='center'
-    result.style.alignItems='center'
-    result.style.gap='20px'
+    result.classList.remove('welcome')
+    result.classList.add('final')
     kilogram.value=''
     meter.value =''
     stone.value=''
