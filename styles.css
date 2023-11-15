@@ -156,7 +156,6 @@ input[type="radio"] {
 .imperial-height {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
 }
 .imperial-weight {
   display: flex;
@@ -239,11 +238,10 @@ input[type="text"]:focus {
 .result {
   width: 100%;
   display: flex;
+  flex-direction: column;
   padding: 32px;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  align-self: stretch;
   border-radius: 16px 999px 999px 16px;
   background: linear-gradient(90deg, var(--Blue) 0%, #587dff 100%);
 }
@@ -272,6 +270,7 @@ input[type="text"]:focus {
   width: 50%;
 }
 #ideal .weight {
+  width: 50%;
   margin: 150px 0 0;
   padding: 20px;
   gap: 30px;
@@ -302,6 +301,11 @@ input[type="text"]:focus {
   gap: 25px;
   align-items: start;
 }
+.steps div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .steps .icons {
   width: 72px;
   height: 72px;
@@ -314,6 +318,7 @@ input[type="text"]:focus {
 }
 #limitations .limits {
   width: 50%;
+  padding-right: 20px;
 }
 .limits h2 {
   margin-bottom: 15px;
@@ -366,6 +371,7 @@ input[type="text"]:focus {
   .container {
     margin: 0;
     padding: 30px 20px;
+    background-color: yellowgreen;
   }
   h1 {
     font-size: 3.5rem;
@@ -376,10 +382,10 @@ input[type="text"]:focus {
   p {
     font-size: 0.875rem;
   }
-
   .form {
-    width: 450px;
+    width: 500px;
   }
+
   #hero {
     margin-bottom: 250px;
   }
@@ -412,5 +418,90 @@ input[type="text"]:focus {
   }
   .limit-pregnancy {
     right: 530px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    height: auto;
+    margin: 0;
+    gap: 40px;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 110%; /* 52.8px */
+    letter-spacing: -2.4px;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 110%; /* 35.2px */
+    letter-spacing: -1.6px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: -1.2px;
+  }
+  h4 {
+    font-size: 1.25rem;
+    letter-spacing: -1px;
+  }
+  .main p,
+  .limits p {
+    text-align: center;
+  }
+  nav {
+    text-align: center;
+  }
+  .main {
+    width: 100%;
+    padding: 0 75px;
+  }
+  #hero {
+    margin-bottom: 30px;
+    background-color: antiquewhite;
+  }
+  .form {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px;
+    margin: 30px 0 0 0;
+  }
+  .result {
+    text-align: center;
+    justify-content: space-around;
+  }
+  .classification {
+    text-align: left;
+    width: 50%;
+  }
+  .score {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  #ideal {
+    /* margin-top: 200px; */
+  }
+  #improvements {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+  }
+  #improvements .steps {
+    flex-direction: row;
+  }
+  .steps .icons {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0;
   }
 }

@@ -131,15 +131,14 @@ btn.addEventListener("click", (e)=>{
   e.preventDefault()
 
   let numbers = /^[0-9]+$/;
-      if(isMeteric && kilogram.value.match(numbers) && meter.value.match(numbers))
-  {
+if(isMeteric && kilogram.value.match(numbers) && meter.value.match(numbers)){
   const metricResults = categorizeBMI(kilogram.value, meter.value)
-  result.innerHTML =`<article>
+  result.innerHTML =`<article class="score">
   <p>Your BMI is...</p>
-  <h1 class="score" id="score">${metricResults.bmi}</h1>
+  <h1  id="score">${metricResults.bmi}</h1>
 </article>
-<p>
-  Your BMI suggests you're<span class="classification"> ${metricResults.category}</span>.
+<p class="classification">
+  Your BMI suggests you're<span> ${metricResults.category}</span>.
   Your ideal weight is between
   <span class="range">${metricResults.idealWeightRange}</span>.
 </p>`
@@ -150,12 +149,12 @@ const heightImperial = convertHeightToMeters(Number(feet.value), Number(inch.val
 const weightImperial = convertWeightToKilograms(Number(stone.value), Number(lb.value));
 // Categorize BMI and provide ideal weight range
 const imperialResults = categorizeBMIinStone(weightImperial, heightImperial);
-result.innerHTML =`<article>
+result.innerHTML =`<article class="score">
   <p>Your BMI is...</p>
-  <h1 class="score" id="score">${imperialResults.bmi}</h1>
+  <h1  id="score">${imperialResults.bmi}</h1>
 </article>
-<p>
-  Your BMI suggests you're<span class="classification"> ${imperialResults.category}</span>.
+<p class="classification">
+  Your BMI suggests you're<span > ${imperialResults.category}</span>.
   Your ideal weight is between
   <span class="range">${imperialResults.idealWeightRange}</span>.
 </p>`
@@ -175,7 +174,10 @@ else if(isMeteric){
     
 
 }
-
+    result.style.flexDirection='row'
+    result.style.justifyContent='center'
+    result.style.alignItems='center'
+    result.style.gap='20px'
     kilogram.value=''
     meter.value =''
     stone.value=''
